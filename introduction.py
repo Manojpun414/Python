@@ -1,169 +1,88 @@
-# what is function? --> Function is a block of code which only runs when it is called
+# print("Hello")
+# print("Hello python")
+# print("Hello,30,True")
 
-#  Types of function
-# 1.built-in function:print(),input(),type(),len(), etc. 
-# 2.user-defined function:function which is created by user. 
-
-# Rules for creating function:
-#  1.function name should be meaningful
-# 2.function name should not be same as built-in function name.
-# 3.function name should not be same as variable name.
-# 4.function name should not same as keyword
-# 5.function name should not start with number.
-# 6.function name should not contain special character except underscore(_)
-
-#declaration of function:
-# def message():
-#     print("Hello world")
-#calling of function:
-# message()
-# message()
-
-#function with parameter
-# def message(name):
-#     print("Hello",name)
-# message("Manoj")
-# message("Pun")
-
-# def students(id,name,email):
-#     print("Id:",id)
-#     print("Name:",name)
-#     print("E-mail:",email)
-# students(1,"Manoj","Manojpun12@gmail.com")
-
-#Function with optional parameter
-# def user(name,age=0):
-#     print("Name:",name)
-#     print("Age:",age)
-# user("Manoj")
-
-# def user(name,age=0): Note:optional should be assigned from second and rest but not in the first like you cannot make name="Manoj"
-#     print("Name:",name) Note:also like if you create optional then you have to create optional for the rest as well like age=0,address="Kathmandu"
-#     print("Age:",age)
-# user("Manoj",50)
-
-
-# def users(*names):
-#     print(names)
-# users("Rahul","Manoj","Pun")
-#either
-# def users(names):
-#     print(names)
-# users(["Rahul","Manoj","Pun"])
-
-# def users(*args,**kwargs): Kwargs-->keywords argument
-#     print(args)
-#     print(kwargs)
-# users("Rahul","Raj","Ravi","Ramesh",name="Manoj",age=20,address="Kathmandu")
-
-#Function return value
-# def add(a,b):
-#     return a+b
-# print(add(30,5)) -->but this is best
-#either
-# def add(a,b):
-#     return a+b
-# result=add(30,5)
-# print(result)
-
-# default arguments
-# def add(a,b=5): -->here b=5 is default arguments
-#     return a+b
-# print(add(30))
-
-# def add(a,b):
-#      a+b
-# print(add(30,5))
-
-# def add(a,b):
-#     return a+b
-#     return a-b -->this means you cannot give two return
-# print(add(30,5))
-
-# def add_sub(x,y):
-#     a=x+y
-#     b=x-y
-#     return[a,b]
-# res=add_sub(30,5)
-# print(res)    
-
-#Function Scope:
-#global variable
-#local variable
-
-# x=10    -->this is called global variable
-# def test():
-#     print(x)
-# test()
-
-# but you cannot do the following:
-# def test():
-#     x=10
-# test()
+# variables
+# variables are used to store data
+# x=10
 # print(x)
 
-# x=10
-# def test():
-#     x=50
-#     print(x)
-# test()
-# print(x)
+#rules for naming variables
+#1.variable name should start with a letter or underscore
+#2.variable name should not start with a number
+#3.variable name should not contain any special characters
+#4.variable name should not be a keyword
+# _=10
+# print(_)
+# username="manoj" --->however this is not a good practise for naming variable
+# print(username)
+#The perfect way for naming variable is given below
+#userName:camel case -->used for defining variable name
+#user_name:snake case -->used for function
+#UserName:pascal case -->used for making class or objects
+# name="Ram"
+# age=20
+# print(name,age)
+# print("name is",name, "age is",age) -->However not a good practice
+# print("name is {} age is {}".format(name,age)) -->best practise for less than python version3
+# print(f"name is {name} age is {age}") -->best practice for more than python version3 -->this is the best practise
 
-# x=10
-# def test():
-#     a=x+10
-#     print(a)
-# test()
+# name=input("Enter your name:")
+# print(name)
 
-# x=10
-# def test():
-#     x=x+10
-#     print(x)
-# test()      -->here python does not understand x whether it is global or local so to solve that problem do the following
+# a=int(input("Enter a:"))
+# b=int(input("Enter b:"))
+# print(a+b)
 
-# x=10
-# def test():
-#     global x
-#     x=x+10
-#     print(x)
-# test()
-# print(x)
+# a="10"
+# print(type(a))
+# a=int(a)
+# print(type(a))
 
-#Nested function
-# def test():
-#     print("Hello World")
-# def message():
-#     test()
-# message()
+# a,b=20,40
+# print(a,b)
 
-# def students():
-#     def home():
-#         print("Hello ghar")
-#     return home
-# students()
+# a,b=20
+# print(a,b)
 
-#Lambda function
-# a=lambda x,y:x+y
-# print(a(10,20))
+# *a,b=20,30,50,60,54
+# print(a)
+# print(b)
 
-#mathiko ma vako chai yo ho
-# def a(x,y):
-#     return x+y
+# a,*b=20,30,50,60,54
+# print(a)
+# print(b)
 
-# def fac(n):
-#     if n==1:
-#         return 1
-#     else:
-#         return n*fac(n-1)
-# print(fac(5))
+# x=20
+# print(dir(x)) -->dir vaneko chai x vitra k k xata vanera herne
+ 
+# name='ram karki'
+# print(name.upper())
 
-# def a():
-#     return 10
-# def b():
-#     c=a()
-#     print(c)
-# b()
+# data types
+# number:int,float,complex
+# sting:str
+# list:list
+# tuple:tuple
+# dictionary:dict
+# set:set
+# boolean:bool
+# None:none
+
+# a=7+6j
+# print(a.real)
+# print(a.imag)
+
+# course="we are learning python"
+# print(course[0])
+# print(course[-1])
+# print(course[:])
+# print(course[:5])
+# print(course[5:])
+# print(course[6:12])
+
+# num=1234.576768585
+# print(f"{num:.2f}")
 
 
-
-
+#jhdfgj#
